@@ -41,21 +41,21 @@
 #### Implementation
 - Using basic building blocks of Full Adder, have 2 gate delays.
 - Chain together to form Ripple Carry Adder to perform multiple bit addition
-![chap3-1]()
+![chap3-1](https://github.com/X-mei/ECE550-Review-Pic/blob/main/chap3-1.png?raw=true)
 - Use Carry Select Adder to cut off some gate delays, as a trade off, takes up more power memory.
-![chap3-2]()
+![chap3-2](https://github.com/X-mei/ECE550-Review-Pic/blob/main/chap3-2.png?raw=true)
 - To do substraction, add a control bit to determine whether to flip B.
-![chap3-3]()
+![chap3-3](https://github.com/X-mei/ECE550-Review-Pic/blob/main/chap3-3.png?raw=true)
 ### Bit Shift
 #### Basic Idea
 - Left shift: moves left, brining in 0s at right, excess bits "fall off".
 - Logical(Unsigned) Right shift: moves bits right, bringing in 0s at left, excess bits "fall off".
 - <font color=red>Arithmetic(Signed) right shift: moves bits to right, Bringing in (sign bit) at left.</font>
-![chap3-4]()
+![chap3-4](https://github.com/X-mei/ECE550-Review-Pic/blob/main/chap3-4.png?raw=true)
 
 ### Floating Point Numbers
 - IEEE representation: 
-![chap3-5]()
+![chap3-5](https://github.com/X-mei/ECE550-Review-Pic/blob/main/chap3-5.png?raw=true)
 - Floats cannot hold all ints, doubles can represent all 32-bit ints but not all 64-bit ints.
 - When representing 0, +/-0 is the same. Exponent is demoralized.
 - Exponent 11111111 is not standard.
@@ -66,19 +66,20 @@
 - Output of the circuit is a function of the input and a function of a stored value (state)
 ### SR latch
 - Circuit and truth table:
-![chap4-1]()
+![chap4-1](https://github.com/X-mei/ECE550-Review-Pic/blob/main/chap4-1.png?raw=true)
 - When S and R are set at once, the output is undetermined.
 - It has a bad interface.
 ### D latch
 - Circuit and truth table:
-![chap4-2]()
+![chap4-2](https://github.com/X-mei/ECE550-Review-Pic/blob/main/chap4-2.png?raw=true)
 - This is level triggered, could mass up the data in later steps unintentionally.
 ### D Flip Flop
 - Circuit and way of function:
-![chap4-3]()
+![chap4-3](https://github.com/X-mei/ECE550-Review-Pic/blob/main/chap4-3.png?raw=true)
 - Still have to ensure signals reach DFF before clk rises. (solved by synthesis tool like quartus to make timing)
 - Could do both rising and falling edge trigger
 - To fix timing misses: 
+![chap4-4](https://github.com/X-mei/ECE550-Review-Pic/blob/main/chap4-4.png?raw=true)
 ### Register
 - Using DFF as basic component
 - Use a decoder on the input side to convert the read signal into a one-hot control bit to realize selected writing.
@@ -94,11 +95,11 @@
 - Compute as function of inputs and state.
 ### Mealy Machine and Moore Machine
 - Mealy machine is a finite-state machine whose output values are determined both by its current state and the current inputs.
-![chap5-1]()
+![chap5-1](https://github.com/X-mei/ECE550-Review-Pic/blob/main/chap5-1.png?raw=true)
 - Moore machine, whose output values are determined solely by its current state.
-![chap5-2]()
+![chap5-2](https://github.com/X-mei/ECE550-Review-Pic/blob/main/chap5-2.png?raw=true)
 - For both of them, excitation table is the relation between current and next state with input.
-![chap5-3]()
+![chap5-3](https://github.com/X-mei/ECE550-Review-Pic/blob/main/chap5-3.png?raw=true)
 ## Chapter 6 ISAs and MIPS(a form of ISAs)
 ### Basic Idea
 - Assembly language is a very low level language but is still not machine language.
@@ -117,7 +118,7 @@
 - Various operand models
 - Can operate directly on memory
 - Addressing mode:
-![chap6-1]()
+![chap6-1](https://github.com/X-mei/ECE550-Review-Pic/blob/main/chap6-1.png?raw=true)
 #### RISC
 - Write in high level, let complier to compile and optimize.
 - Simple, fixed length instruction encoding
@@ -127,4 +128,4 @@
 - Three-operand arithmetic (dest = src1 op src2)
 - Load-store ISA: have specific instructions to access memory rather than using memory operands.
 - Addressing mode:
-![chap6-2]()
+![chap6-2](https://github.com/X-mei/ECE550-Review-Pic/blob/main/chap6-2.png?raw=true)
